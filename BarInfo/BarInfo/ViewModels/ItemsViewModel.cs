@@ -12,6 +12,15 @@ namespace BarInfo.ViewModels
 {
     class ItemsViewModel : BaseViewModel
     {
-        public ObservableCollection 
+        public ObservableCollection<Item> Items { get; set; }
+        public Command LoadItemsCommand { get; set; }
+
+        public ItemsViewModel()
+        {
+            Title = "Browse";
+            Items = new ObservableCollection<Item>();
+
+        }
+
     }
 }

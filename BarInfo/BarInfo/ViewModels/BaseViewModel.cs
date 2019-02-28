@@ -14,14 +14,21 @@ namespace BarInfo.ViewModels
 {
     class BaseViewModel : INotifyPropertyChanged
     {
-        private int _title;
+        private string _title;
 
-        public int MyProperty
+        public string Title
         {
             get => _title;
             set => SetProperty(ref _title, value);
         }
 
+        private bool _isBusy = false;
+
+        public bool IsBusy
+        {
+            get { return _isBusy; }
+            set { SetProperty(ref _isBusy, value); }
+        }
 
         protected bool SetProperty<T>(ref T backingStore, T value, [CallerMemberName]string propertyname = "", Action onChanged = null)
         {
