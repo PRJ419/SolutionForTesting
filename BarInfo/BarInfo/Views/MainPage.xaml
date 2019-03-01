@@ -6,12 +6,9 @@
             x:Class="BarInfo.MainPage">
     <TabbedPage.Children>
         <NavigationPage Title="Info">
-        </NavigationPage>
-        <NavigationPage Title="Drinks">
-        </NavigationPage>
-        <NavigationPage Title="Events">
-        </NavigationPage>
-        <NavigationPage Title="Coupons">
+            <x:Arguments>
+                <views:ItemsPage></views:ItemsPage>
+            </x:Arguments>
         </NavigationPage>
     </TabbedPage.Children>
 

@@ -6,28 +6,28 @@ using System.Runtime.CompilerServices;
 using Xamarin.Forms;
 
 using BarInfo.Models;
-//using BarInfo.Services;
-
-
+using BarInfo.Services;
 
 namespace BarInfo.ViewModels
 {
-    class BaseViewModel : INotifyPropertyChanged
+    public class BaseViewModel : INotifyPropertyChanged
     {
-        private string _title;
 
-        public string Title
-        {
-            get => _title;
-            set => SetProperty(ref _title, value);
-        }
+        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>() ?? new MockDataStore();
 
         private bool _isBusy = false;
 
         public bool IsBusy
         {
-            get { return _isBusy; }
-            set { SetProperty(ref _isBusy, value); }
+            get => _isBusy;
+            set => SetProperty(ref _isBusy, value);
+        }
+
+        private string _title;
+        public string Title
+        {
+            get => _title;
+            set => SetProperty(ref _title, value);
         }
 
         protected bool SetProperty<T>(ref T backingStore, T value, [CallerMemberName]string propertyname = "", Action onChanged = null)
@@ -45,13 +45,11 @@ namespace BarInfo.ViewModels
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
-            PropertyChangedEventHandler changed = PropertyChanged;
+            var changed = PropertyChanged;
             if (changed == null)
-            {
                 return;
-            }
 
-            changed.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            changed?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
 
