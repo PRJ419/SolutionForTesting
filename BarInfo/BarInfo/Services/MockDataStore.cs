@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BarInfo.Models;
+using Xamarin.Forms;
 
 namespace BarInfo.Services
 {
@@ -17,7 +18,8 @@ namespace BarInfo.Services
             _items = new List<Item>();
             var mockItems = new List<Item>
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Katrines kælder", Description="Lets get it on!",},
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Dat-Bar", Description="Meh"}
             };
 
             foreach (var item in mockItems)

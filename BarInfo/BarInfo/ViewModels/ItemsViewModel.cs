@@ -20,8 +20,6 @@ namespace BarInfo.ViewModels
             Title = "Bar-O-Meter";
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await OnExecuteLoadItemsCommand());
-
-           // FUUUUUUCKKKK MessagingCenter.Subscribe<NewItemPage, Item>();
         }
 
         private async Task OnExecuteLoadItemsCommand()

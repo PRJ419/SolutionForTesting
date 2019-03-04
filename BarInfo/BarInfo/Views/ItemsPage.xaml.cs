@@ -24,12 +24,7 @@ namespace BarInfo.Views
         {
             await DisplayAlert("Item added", "Well done", "ok");
         }
-
-        private async void ItemsListView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            await DisplayAlert("Item selected", "Well done", "ok");
-        }
-
+                
         protected override void OnAppearing()
         {
             base.OnAppearing();
