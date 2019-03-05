@@ -18,8 +18,8 @@ namespace BarInfo.Services
             _items = new List<Item>();
             var mockItems = new List<Item>
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Katrines kælder", Description="Lets get it on!",},
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Dat-Bar", Description="Meh"}
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Katrines kælder", Description="Lets get it on!", Image = "bar.jpg"},
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Dat-Bar", Description="Meh", Image = "chess.jpg"}
             };
 
             foreach (var item in mockItems)

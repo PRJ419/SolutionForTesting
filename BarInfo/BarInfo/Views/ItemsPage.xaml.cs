@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BarInfo.Models;
 using BarInfo.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -20,11 +21,15 @@ namespace BarInfo.Views
             BindingContext = _viewModel = new ItemsViewModel();
         }
 
-        private async void AddItem_Clicked(object sender, EventArgs e)
+        private async void OnSelectedItem(object sender, SelectedItemChangedEventArgs args)
         {
-            await DisplayAlert("Item added", "Well done", "ok");
+            if (!(args.SelectedItem is Item item))
+                return;
+
+            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
+
         }
-                
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
