@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DetailedBar"
+             x:Class="DetailedBar.MainPage">
+    <StackLayout>
+        <Image Source="barometer.png"></Image>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <ImageButton Source="barglas.png" Grid.Column="0" Grid.Row="0" Clicked="BarsClicked_OnClicked"></ImageButton>
+            <Label Text="Look Up Bars" Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+            <ImageButton Source="man.png" Grid.Column="1" Grid.Row="0"></ImageButton>
+            <Label Text="User Login" Grid.Column="1" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+            <ImageButton Source="cocktail.png" Grid.Column="0" Grid.Row="2"></ImageButton>
+            <Label Text="Bar Login" Grid.Column="0" Grid.Row="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+            <ImageButton Source="events.png" Grid.Column="1" Grid.Row="2" Clicked="Events_OnClicked"></ImageButton>
+            <Label Text="About" Grid.Column="1" Grid.Row="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+        </Grid>
+    </StackLayout>
+</ContentPage>

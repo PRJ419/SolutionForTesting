@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace BarInfo
+namespace DetailedBar
 {
     public partial class MainPage : TabbedPage
     {

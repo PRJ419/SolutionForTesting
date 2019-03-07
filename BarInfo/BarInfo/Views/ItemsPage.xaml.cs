@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BarInfo.Models;
-using BarInfo.ViewModels;
+using DetailedBar.Models;
+using DetailedBar.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace BarInfo.Views
+namespace DetailedBar.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ItemsPage : ContentPage

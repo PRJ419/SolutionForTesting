@@ -4,10 +4,10 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BarInfo.Models;
+using DetailedBar.Models;
 using Xamarin.Forms;
 
-namespace BarInfo.Services
+namespace DetailedBar.Services
 {
     public class MockDataStore : IDataStore<Item>
     {
